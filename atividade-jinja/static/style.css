@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:#F7F5F2;
+    color:#4A4A4A;
+    padding:40px 20px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#5A514A;
+}
+
+.card{
+    background:#FFFFFF;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:18px;
+    border:1px solid #E8E3DD;
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+h2{
+    margin-bottom:15px;
+    color:#8A7B6F;
+}
+
+p{
+    margin:8px 0;
+}
+
+select{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #D8D1C8;
+    margin-bottom:15px;
+    background:white;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#BFA58A;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#A88D72;
+}
+
+.resultado{
+    margin-top:20px;
+    padding-top:15px;
+    border-top:1px solid #ECE7E1;
+}
+
+.aprovado{
+    color:#2E7D32;
+    font-weight:bold;
+}
+
+.reprovado{
+    color:#C62828;
+    font-weight:bold;
+}

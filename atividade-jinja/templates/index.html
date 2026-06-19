@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade Jinja2</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Olá, {{ nome }}</h2>
+
+        <p><strong>Nome:</strong> {{ nome }}</p>
+        <p><strong>Idade:</strong> {{ idade }}</p>
+        <p><strong>Email:</strong> {{ usuario.email }}</p>
+    </div>
+
+    <div class="card">
+        <h2>Alunos cadastrados</h2>
+
+        {% for aluno in alunos %}
+            <p>{{ loop.index }} - {{ aluno }}</p>
+        {% endfor %}
+    </div>
+
+    <div class="card">
+        <h2>Consultar Resultado</h2>
+
+        <form method="GET">
+
+            <select name="aluno">
+
+                <option value="">
+                    Selecione um aluno
+                </option>
+
+                {% for aluno in alunos %}
+                    <option value="{{ aluno }}">
+                        {{ aluno }}
+                    </option>
+                {% endfor %}
+
+            </select>
+
+            <button type="submit">
+                Consultar
+            </button>
+
+        </form>
+
+        {% if resultado %}
+            <div class="resultado">
+
+                <h3>{{ aluno_selecionado }}</h3>
+
+                {% if resultado == "Aprovado" %}
+                    <p class="aprovado">
+                        {{ resultado }}
+                    </p>
+                {% else %}
+                    <p class="reprovado">
+                        {{ resultado }}
+                    </p>
+                {% endif %}
+
+            </div>
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
